@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="sfc_Banner">ca-app-pub-9315902292006874/2089491941</string>
     <string name="app_name">Selfie Camera HD</string>
     <string name="action_settings">Settings</string>
     <string name="action_popup">Popup settings</string>
-    <string name="intro_text">Touch to focus, and press the blue camera button to take photos. For more help, click Online help from Settings. Open Camera is completely free. If you like this app, please consider buying my donate app :) (see link in Settings, or Online help).\n\nPrivacy Policy: Location permission is required for geotagging, but this is disabled by default. If enabled, your location is encoded in the saved files (and it is only used for this purpose).\n\n(This message won\'t show again.)</string>
+    <string name="intro_text">Select Sticker to blend with your photo. Use finger to zoom in-zoom out, drag and drop, Rotate Stickers .Touch to focus, and press the blue camera button to take photos.</string>
     <string name="intro_ok">OK (This message won\'t show again)</string>
     <string name="answer_yes">Yes</string>
     <string name="answer_no">No</string>
@@ -108,7 +106,7 @@
     <string name="preference_save_location">Save location</string>
     <string name="preference_save_location_summary">Folder to save the photo/video files in</string>
     <string name="preference_show_when_locked">Show camera when locked</string>
-    <string name="preference_show_when_locked_summary">If enabled, Open Camera will still show above any lockscreen (you\'ll still have to unlock to access Settings, Gallery etc)</string>
+    <string name="preference_show_when_locked_summary">If enabled, Selfie Camera HD will still show above any lockscreen (you\'ll still have to unlock to access Settings, Gallery etc)</string>
     <string name="preference_lock_video">Lock screen when recording video</string>
     <string name="preference_lock_video_summary">When recording video, the GUI will be locked to prevent accidentally stopping recording. Swipe the screen to unlock. Note that video recording will always stop if the app goes into background or the screen is blanked.</string>
     <string name="preference_rotate_preview">Rotate preview</string>
@@ -174,8 +172,8 @@
     <string name="preference_video_flash_summary">If enabled, flash will switch on/off when recording video (can be used to tell camera is still recording at a distance).</string>
     <string name="preference_category_online">Misc</string>
     <string name="preference_online_help">Online help</string>
-    <string name="preference_donate">Donate to support development</string>
-    <string name="preference_donate_summary">If you like this app, please consider making a donation. You can do this by purchasing my "donation app" - click this option will open up the page for my donation app. Thanks!</string>
+    <string name="preference_donate">Other application</string>
+    <string name="preference_donate_summary">Show other applications made by us</string>
     <string name="preference_about">About</string>
     <string name="preference_about_summary">App and debug information</string>
     <string name="about_ok">OK</string>
