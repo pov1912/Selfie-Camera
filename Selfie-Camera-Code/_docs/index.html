@@ -1,0 +1,1070 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Open Camera
+</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38364448-5', 'sourceforge.net');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+
+<p><small><b>More of my Free software:</b>
+<a href="http://homepage.ntlworld.com/mark.harman/comp_wifiremoteplay.html">Wifi Remote Play</a> ~
+<a href="http://erebusrpg.sourceforge.net">Erebus RPG</a>
+</small>
+</p>
+
+<img align="left" src="ic_launcher.png" title="Open Camera icon" width="72" height="72">
+<hr>
+<p><center><h2>Open Camera</h2></center></p>
+<hr>
+
+<!--<p><a href="screenshot_galaxy_nexus_3.jpg">
+<img align="right" src="screenshot_galaxy_nexus_3.jpg" title="Screenshot" width="360" height="640"></a></p>-->
+<!--<p><a href="Screenshot_2014-07-02-14-16-35.jpg">
+<img align="right" src="Screenshot_2014-07-02-14-16-35.jpg" title="Screenshot" width="640" height="360"></a></p>-->
+<p><a href="Screenshot_2014-09-22-14-34-48.jpg">
+<img align="right" src="Screenshot_2014-09-22-14-34-48_thumbversion.jpg" title="Screenshot" width="512" height="288"></a></p>
+
+<p><small><a href="#contents">Jump to Contents.</a></small></p>
+
+<p>Open Camera is an Open Source Camera app for Android phones and tablets. Features:<ul>
+<small>
+<li>Option to auto-stabilise so your pictures are perfectly level no matter what (<a href="#auto_stabilise">see below</a>).</li>
+<li>Zoom via multi-touch gesture and single-touch control.</li>
+<li>Flash on/off/auto/torch.</li>
+<li>Choice of focus modes (including macro, and a "manual" focus mode which only focuses when you touch the screen).</li>
+<li>Touch to select focus area and metering area (metering area is used to determine exposure).</li>
+<li>Face detection option.</li>
+<li>Choice of front/back camera.</li>
+<li>Choose scene modes, color effects, white balance, ISO and exposure compensation.</li>
+<li>Support for exposure lock.</li>
+<li>Video recording (with optional audio, and support for video stabilization, and changing frame rate and bitrate).</li>
+<li>Choice of camera and video resolution, and JPEG image quality. Support for all resolutions offered by the camera. Also support for 4K UHD (3840x2160) video on some Samsung devices (experimental - note that many devices with 4K video don't allow this to be set by 3rd party apps, so this isn't guaranteed to work!).
+<li>Option to lock orientation to portrait or landscape for photo or video.</li>
+<li>Timer option.</li>
+<li>Burst mode, with configurable delay.</li>
+<li>Thumbnail of last photo/video is displayed, with link to the gallery app.</li>
+<li>Option to silence the shutter (requires Android 4.2).</li>
+<li>GUI works in any orientation without any pause when changing orientation. Option to optimise for left and right-handed users.</li>
+<li>Configurable volume keys (to take picture, focus, zoom, change exposure compensation, turn auto-stabilise on/off).</li>
+<li>Choice of save folder (though note <a href="http://www.androidpolice.com/2014/02/17/external-blues-google-has-brought-big-changes-to-sd-cards-in-kitkat-and-even-samsung-may-be-implementing-them/">Google have blocked write access to external SD cards in Android 4.4</a>).</li>
+<li>Configurable on-screen display shows battery, time, remaining device memory, orientation and direction of camera; also option to overlay a choice of grids (including "rule of thirds") and crop guides.</li>
+<li>Preview aspect ratio can be set either to maximise the preview display size, or match the aspect ratio of the photo/video resolution (so what you see is what is actually recorded).</li>
+<li>Optional GPS location tagging (geotagging) of photos and videos; for photos this includes compass direction (GPSImgDirection, GPSImgDirectionRef).</li>
+<li>Option to apply a date and timestamp to photos, and also to stamp photos with the location coordinates.</li>
+<li>Support for external microphones (may not be supported by all devices).</li>
+<li>App shortcut to automatically take a photo after launching.</li>
+<li>Widgets to launch Open Camera, and automatically take a photo, from lock screen (requires Android 4.2).</li>
+<li>Small file size.</li>
+<li>Completely free and ad-free, unlike most Android apps.</li>
+</small>
+</ul></p>
+
+<p>(Some features may not be available on all devices, as they may depend on hardware features, or the Android version.)</p>
+
+<p><ul>
+
+<li><a href="https://play.google.com/store/apps/details?id=net.sourceforge.opencamera">Download from Google Play!</a></li>
+
+<!--<li><a href="http://store.ovi.com/content/476979">Nokia X users can download from Nokia Store!</a></li>-->
+
+<li>Open Camera can also be installed from <a href="https://f-droid.org/">F-Droid</a>.</li>
+
+<li>The APK files are also available from
+<!-- Use small, to avoid messing up view on mobile devices -->
+<small><a href="https://sourceforge.net/projects/opencamera/files/">https://sourceforge.net/projects/opencamera/files/</a></small>
+(useful for installing on devices without access to Google Play, or side-loading, or if you want to install an
+older version of Open Camera).</li>
+
+<li>For Kindle Fire users, Open Camera should work by installing the APK, or you can use
+<a href="https://sites.google.com/site/partychannel3developement/">Simple Camera</a> which is a port of Open Camera to the Kindle Fire
+(<a href="http://www.amazon.com/Partychannel3-Simple-Camera/dp/B00H5CKWK4/">download Simple Camera from Amazon Market</a>).</li>
+
+</ul></p>
+
+<hr>
+<p>Open Camera is completely free, however if you wish you can show your appreciation and support future development by purchasing
+<a href="https://play.google.com/store/apps/details?id=harman.mark.donation">my donation app from Google Play</a>. You can also
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=2WCE756ZME9JG&lc=GB&item_name=Open%20Camera%20donation&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest">donate through Paypal</a>
+(Paypal account not required, supports debit or credit card) or <a href="http://www.bitcoin.org/">Bitcoin</a> (Bitcoin address
+<!-- Use small, to avoid messing up view on mobile devices -->
+<small><b>1LKCFto9SQGqtcvqZxHkqDPqNjSnfMmsow</b></small>).
+Thanks! Donations can be used for: purchasing hardware for porting/testing; app store fees; beer money :)</p>
+
+<hr>
+<p>
+<a href="http://sourceforge.net/p/opencamera/blog/">Open Camera Blog</a> ~
+<a href="http://sourceforge.net/p/opencamera/discussion/">Discussion Forums</a> ~
+<a href="https://sourceforge.net/p/opencamera/code/">Code Repository (Git)</a>
+</p>
+
+<p><a name="contents"><b>Contents:</b>
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#user_interface">On-Screen User Interface</a></li>
+<li><a href="#auto_stabilise">Auto-stabilise feature</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#widgets">Shortcuts and widgets</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contacting me (bugs etc)</a></li>
+<li><a href="#credits">Credits</a></li>
+<li><a href="#licence">Licence</a></li>
+<li><a href="#history">History</a></li>
+</ul>
+</p>
+
+<p><a name="requirements"><b>Requirements</b></p>
+
+<p>This requires Android 4.0 or better. I've tested this successfully on the Samsung Galaxy Nexus and Asus Nexus 7 (2013),
+running Android 4.3. The auto-stabilise feature may not be available if the app deems there is not enough memory (RAM) available
+(technical explanation: requires 128MB of "large heap").</p>
+
+<p>Note that I've had reports of problems on CyanogenMod (CM11) - unfortunately I don't have any CM11 devices to test on,
+and CyanogenMod doesn't appear to offer any means of testing without a real device (e.g., no emulator AVD images, no
+remote device testing), so I have no way of supporting this.</p>
+
+<p><a name="quickstart"><b>Quickstart</b></p>
+
+<p>Simply point, and press the blue camera icon <img src="take_photo.png" width="32" height="32"> to take a photo.
+The camera will automatically focus before taking the picture. You can also focus at any time by touching on the screen. If
+your device supports focus areas, you can touch the part of the screen you want to focus. Touching an area will also
+(if your device supports it) control the exposure level (e.g., so clicking on a bright area will adjust the exposure
+so that it becomes less bright). To zoom, use the slider next to the take photo button, or do a multi-touch "pinch"
+gesture. You can also control via the volume keys on your phone or tablet - by default, pressing them will take a
+photo, but you can change this to zoom in/out from the <a href="#settings">Settings</a>.</p>
+
+<p>You can press the gallery icon to view your photos
+(by default saved in the OpenCamera folder) - it will show the most recent image or video. The gallery button's
+icon will also show a thumbnail for the most recent image/video. Note that there is also an option
+in the <a href="#settings">Settings</a> to "Pause after taking photo" - if ticked,
+then when you take a photo, the image will be displayed - to keep the photo, touch the screen (or take another photo). To delete it,
+press the trash icon <img src="trash.png" width="32" height="32">. To share an image, press the share icon
+<img src="share.png" width="32" height="32">.</p>
+
+<p>The screen display is kept on when Open Camera is running as the foreground app (if
+you want to switch off the display, do so on your device manually).</p>
+
+<p><a name="user_interface"><b>On-Screen User Interface</b></p>
+
+<p>A white square is shown (depending on the focus mode), which turns green to indicate that the auto-focus was
+successful, or red if it was not.</p>
+
+<p><img src="switch_camera.png" width="32" height="32"><b>Switch camera</b> - Switches between front and back camera (if your
+device has two cameras).</p>
+
+<p><img src="switch_video.png" width="32" height="32"><b>Switch to/from video</b> - Switches between taking photo mode, and
+recording video mode. When in video mode, the take photo icon will change to the record video icon
+<img src="take_video.png" width="32" height="32">.</p>
+
+<!--<p><img src="flash_auto.png" width="32" height="32"><b>Flash mode</b> - Click this to cycle through the available flash modes. Popup
+text will explain what each mode is. (Only available if the camera supports flash.)</p>
+
+<p><img src="focus_mode_auto.png" width="32" height="32"><b>Focus mode</b> - Click this to cycle through the available focus modes.
+Popup text will explain what each mode is. (Only available if the camera supports different focus modes.) A special mode is "Focus Manual",
+which means the camera will never refocus when taking a photo, instead you should touch the screen to manually focus.</p>-->
+
+<p><img src="exposure.png" width="32" height="32"><b>Exposure compensation</b> - Clicking this will bring up a
+slider and plus/minus buttons which can be used to control the exposure compensation. A higher value increases
+the exposure, so that pictures come out brighter in low light; a lower value makes pictures darker. Set to 0 for
+the default exposure. To get rid of the slider and buttons, either click the Exposure button again, or click
+elsewhere on the screen. See <a href="http://en.wikipedia.org/wiki/Exposure_compensation">Exposure compensation</a>.
+(Only available if the camera supports control of the exposure.)</p>
+
+<p><img src="exposure_unlocked.png" width="32" height="32"><b>Exposure lock</b> - Click to lock or unlock the exposure.
+When locked, the icon will change to <img src="exposure_locked.png" width="32" height="32">. Locking the exposure means
+the exposure doesn't change based on the brightness of the current scene (though you can still adjust the exposure
+compensation).</p>
+
+<p><img src="popup.png" width="32" height="32"><b>Popop menu</b> - Opens the popup menu for quick access to changing
+flash, focus, ISO, white balance, scene mode, color effect, camera resolution, timer: For flash and focus modes,
+selecting an option will display popup text explaining what the mode is. A special mode is "Focus Manual", which
+means the camera will never refocus when taking a photo, instead you should touch the screen to manually focus.
+The other options are:<ul>
+<li><b>ISO</b> - A higher ISO setting means the camera is more sensitive to light, though may also
+result in more noise. This mimics the film speed on traditional film cameras. Note that this
+setting may not be supported on all cameras. See
+<a href="http://digital-photography-school.com/iso-settings">here</a> for more details on ISO.</li>
+<li><b>White balance</b> - Choose a method to control how the white balance is set. See
+<a href="http://digital-photography-school.com/introduction-to-white-balance">here</a> for an
+explanation of white balance. (Only available if the camera supports different white balance
+settings.)</li>
+<li><b>Scene mode</b> - Choose a scene mode to apply. (Only available if the camera supports scene
+modes.)</li>
+<li><b>Color effect</b> - Choose a color effect to apply. (Only available if the camera supports
+color effects.)</li>
+<li><b>Auto-stabilise</b> - Enable the auto-stabilise features for photos (see
+<a href="#auto_stabilise">below</a>). (Only available if the device has enough memory.)</li>
+</ul>
+See <a href="#settings">Settings</a> for more info on the other settings.</p>
+
+<p><b>Gallery</b> - Click to launch the Gallery app, to view the most recent
+photo/video (by default saved in the OpenCamera folder). If you get the message "No Gallery app available", then you should install
+a Gallery app (e.g., <a href="https://play.google.com/store/apps/details?id=com.moblynx.galleryics">Gallery ICS</a>).
+You can also "long press" on the Gallery icon - this will let you switch between the recent save locations, or take you straight to
+a file dialog to choose a save location if additional locations have yet been defined. See <a href="#save_location">Save location</a>
+under Settings/More camera controls for more details.</p>
+
+<p><img src="settings.png" width="32" height="32"><b>Settings</b> - Click to open the <a href="#settings">Settings</a>. (If your phone/tablet
+has a hardware menu button, pressing that should also open the settings.)</p>
+
+<p>The on-screen display also shows the remaining battery left (green/red status bar in the corner), and optionally
+the zoom level (if zoomed in), the remaining free storage space on the device, and the current angle orientation
+of the camera. If "Store location data" is enabled (off by default), then a small "earth" icon
+<img src="earth.png" width="24" height="24"> will appear next to
+the battery indicator when the location is available (you can still take photos when the earth icon doesn't show,
+it's just that location data won't be stored in the photo). A dot shows to the top-right of the earth icon to
+indicate the accuracy (green for accurate, yellow for less accurate). If the location isn't available, a red dash will be shown through the earth icon.</p>
+
+<p><a name="auto_stabilise"><b>Auto-stabilise feature</b></p>
+
+<p>All Android cameras will rotate the photo depending on the orientation of the camera, but only to the nearest 90 degrees - so the
+photos look right whether you hold the device in "portrait" or "landscape" mode. But Open Camera has the option to rotate the
+photos so they are perfectly level, so your shots come out looking perfectly level every time!</p>
+
+<!-- Limit width to 800, to avoid messing up view on mobile devices -->
+<p><a href="auto_stabilise_image_20131009.jpg">
+<img src="auto_stabilise_image_20131009.jpg" width="800" height="253" title="Screenshots demonstrating auto-stabilise"></a></p>
+
+<p>The above shows a rather exaggerated example - in practice, you can probably take better photos, but this feature ensures they
+come out perfectly level, without you having to edit them afterwards in a photo editor. Of course you won't always want this -
+perhaps you're going for artistic 45-degree shots - so this is an option. By default it is disabled.  To enable, go to the
+<a href="#settings">Settings</a>, and enable "Auto-stabilise". Note that this feature is memory intensive - it will not be available
+on devices with low memory. Even where it is available, the performance of taking photos will be
+slower, and there is a risk it may cause the app to fail on devices I haven't been able
+to test. If you do have problems, you'll have to disable the feature again.</p>
+
+<p>Also note that the feature reduces the available space in the image - because rotating an image makes it no longer fit into a
+rectangular image, so we have to crop it. So it's still advisable to try to hold the camera reasonably level when using this
+feature.</p>
+
+<p><a name="settings"><b>Settings</b></p>
+
+<p><b>Camera Effects:</b></p>
+
+<!--<p><b>Apply a color effect</b> - Choose a color effect to apply. (Only available if the camera supports color effects.)</p>
+
+<p><b>Apply a scene mode</b> - Choose a scene mode to apply. (Only available if the camera supports scene modes.)</p>
+
+<p><b>Set the white balance</b> - Choose a method to control how the white balance is set. See
+<a href="http://digital-photography-school.com/introduction-to-white-balance">here</a> for an explanation of white balance. (Only
+available if the camera supports different white balance settings.)</p>-->
+
+<!--<p><b>Set the exposure compensation</b> - A higher value increases the exposure,
+so that pictures come out brighter in low light; a lower value makes pictures
+darker. Set to 0 for the default exposure. See
+<a href="http://en.wikipedia.org/wiki/Exposure_compensation">Exposure compensation</a>.
+(Only available if the camera supports control of the exposure.)</p>-->
+
+<!--<p><b>Set the ISO</b> - A higher ISO setting means the camera is more sensitive to light, though may also result in more
+noise. This mimics the film speed on traditional film cameras. Note that this setting may not be supported on all cameras.
+See <a href="http://digital-photography-school.com/iso-settings">here</a> for more details on ISO.</p>
+
+<p><b>Auto-stabilise</b> - Enable the auto-stabilise features for photos (see <a href="#auto_stabilise">above</a>). (Only available
+if the device has enough memory.)</p>-->
+
+<p><b>Lock photo/video orientation</b> - Normally the orientation of the photo/video will be rotated by some multiple of
+90 degree such that the orientation looks right - e.g. if your device is held in portrait, the resultant image/video will
+be in portrait. This option allows fixing the camera to either be in portrait or landscape. Note that if auto-stabilise
+is also enabled, it will have the effect of aligning photos to the nearest 90 degrees.</p>
+
+<p><b>Face detection</b> - If this is enabled, then the camera will automatically try to detect faces, and use
+them for the focus, metering (exposure) and white balance. Faces will be drawn as yellow squares when detected.
+Note that if this option is enabled, then you will not be able to touch to manually select the focus area, and
+the white balance option will have no effect (since the face recognition will be used to determine these).</p>
+
+<p><b>Camera Controls:</b></p>
+
+<p><b>Timer</b> - Set a timer for taking photos or recording video.</p>
+
+<p><b>Timer beep</b> - Whether to beep when the timer is counting down, or for the burst mode delay (see below).</p>
+
+<p><b>Burst mode</b> - Take a repeated set of photos when the camera button is pressed.</p>
+
+<p><b>Burst mode interval</b> - Specify the delay (if any) between photos in burst mode. Note that if no delay is
+selected, the actual speed that the photos are taken at will depend on the performance of your device's camera. If
+a delay is selected, note that this does not include the time taken to auto-focus and take each photo.</p>
+
+<p><b>More camera controls...</b> - Select to access the following controls:</p>
+
+<p><b>Pause after taking photo</b> - If ticked, after taking a photo the display will pause, with options to share or delete the
+photo. To keep the photo and continue, touch the screen (or take another photo).</p>
+
+<p><b>Shutter sound</b> - Whether to play a sound after taking a photo. (Requires Android 4.2 or higher to disable.)</p>
+
+<p><b>Volume keys</b> - You can set what happens when the volume keys are pressed: either take photo/video,
+focus, zoom in/out, change the exposure compensation, switch auto-stabilise on/off, just change the device's volume
+as normal, or do nothing.</p>
+
+<p><a name="save_location"><b>Save location</b> - Select the folder to store the photos in. Click on a folder (or "Parent Folder") to
+navigate through the filesystem. Select "New Folder" to create a new folder in the currently displayed folder.
+Select "Use Folder" to choose the currently displayed folder. Note that on Android, there are some folders that
+cannot be written to - Open Camera will display a message if you try to use one of these folders. You can also use
+this option to save to an external SD card, though unfortunately the path varies depending on the device, so you'll
+have to look this up or find it out yourself - it's usually one of the folders inside /mnt/ (press "Parent Folder"
+until you're in "/", then select "mnt", then have a look inside one of the folders in there - note that confusingly
+it won't be "sdcard", but will be named something else, e.g., "extSdCard"). Also note that
+<a href="http://www.androidpolice.com/2014/02/17/external-blues-google-has-brought-big-changes-to-sd-cards-in-kitkat-and-even-samsung-may-be-implementing-them/">Google
+have blocked write access to external SD cards in Android 4.4</a>. Once you have specified a new save location, you
+can long press on the Gallery icon to quickly switch between recent save locations.
+
+<!--Enter the folder to store the photos in. This can be either a relative path (e.g.,
+OpenCamera or even something like MyPics/Camera) in which case the folder will be located inside the "DCIM"
+folder (usually something like /sdcard/DCIM/ ). For more advanced users, if the folder name starts with "/", then
+it indicates the full absolute path (e.g., /sdcard/Pictures/Photos ). Note that folder names are case sensitive.
+OpenCamera will attempt to create the folder (and any sub-folders as required) if it doesn't exist. If you specify
+a path that you don't have write permissions for, then OpenCamera will fail to save images/videos (and this will
+be reported when you try to take a photo or video).-
+You can also use this option to save to an external SD card, though unfortunately the path varies depending on the
+device, so you'll have to look this up yourself (it's usually something inside /mnt/ - a file explorer app such as
+<a href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop">ES File Explorer</a> may help).-->
+</p>
+
+<p><b>Show camera when locked</b> - If you have a lock screen on your device (e.g., PIN to unlock), Open Camera by
+default will show above the lock screen - i.e., if locked, you won't have to enter the PIN to use Open Camera. The
+device still needs to be unlocked in order to go to the Settings or Gallery. If you would prefer Open Camera to always
+be unavailable when your device is locked, you can disable this option.</p>
+
+<p><b>Lock screen when recording video</b> - if enabled, the GUI will be locked when recording video (i.e., the GUI
+won't respond to touch presses). You can use this to prevent accidental presses that might change settings or stop
+recording. To unlock the GUI, swipe the screen (in any direction). Note that this won't prevent the video being
+stopped if you press your device's Home, Recent Apps or Power button (it is not possible for apps to override the
+behaviour of these buttons).</p>
+
+<p><b>Rotate preview</b> - this option rotates the on-screen preview by 180 degrees. Most users won't ever need this,
+but this option can be useful if you are using Open Camera with equipment which inverts the image. Note that this
+doesn't rotate the resultant photos/videos - you'll still have to rotate those yourself afterwards - but this will
+correct the preview so that you can still see what you are shooting properly.</p>
+
+<p><b>On screen GUI...</b> - Select to access the following controls:</p>
+
+<p><b>Preview size</b> - By default, Open Camera matches the aspect ratio of the preview (the image that is
+displayed on the phone/tablet's display) with that of the photo resolution ("Match photo size (WYSIWYG)" mode). The
+advantage is that what you see in the preview will match what will be in the resultant photo
+("What-You-See-Is-What-You-Get") - though this may mean you will have "black bars" on the display in order to do
+this. If instead you select "Maximise preview size", then the camera preview will be as large as possible, trying to
+fill the available space. However if the resolution of the photo is a different aspect ratio to that of your device,
+this will result in the preview being cropped. In video mode, the preview is always in WYSIWYG mode.<ul>
+<li>Note that Android 4.4.3 <a href="https://code.google.com/p/android/issues/detail?id=70830">introduced a bug</a>
+which means that the aspect ratio will be wrong if you select "Maximise preview size" (i.e., the preview will look
+squished). To avoid this problem, stick with "Match photo size".</li>
+<li>Also note that even in "Match photo size" mode, on some devices and resolutions, it may not be possible to match
+the preview to the resultant photo/video exactly; in such cases, Open Camera will try to match as closely as
+possible.</li>
+</ul></p>
+
+<p><b>UI placement</b> - Whether to optimise the user interface for left-handed or right-handed use.</p>
+
+<p><b>Immersive mode</b> - Allows you to choose between various modes which affect the behaviour of the user-interface, in order to
+make it more immersive (requires Android 4.4 or higher):<ul>
+<li><b>Off</b> - Don't use Android's immersive mode, and on-screen virtual navigation buttons are always visible.</li>
+<li><b>Only hide on-screen virtual navigation buttons (default)</b> - Don't use Android's immersive mode, but on-screen virtual
+navigation buttons are dimmed.</li>
+<li><b>Hide GUI</b> - After a short delay, any on-screen virtual navigation buttons will disappear, along with most of the GUI buttons.
+To exit this immersive mode, either touch on-screen, or swipe in from the top/bottom sides when the device is held in landscape (or
+left/right sides if held in portrait).</li>
+<li><b>Hide everything</b> - Same as "Hide GUI", but when in immersive mode everything will disappear except the camera preview. This
+mode probably isn't useful for most people (since you need to exit immersive mode even to take a photo), but is available if you wish
+to only have the preview showing.</li>
+</ul></p>
+
+<p><b>Show zoom</b> - Whether to display the current zoom level of the camera (when zoomed in).</p>
+
+<p><b>Show zoom -/+ controls</b> - Whether to display -/+ buttons to control zoom.</p>
+
+<p><b>Show zoom slider controls</b> - Whether to display to a slider to control zoom.</p>
+
+<p><b>Show free memory</b> - Whether to display the remaining storage space of the device.</p>
+
+<p><b>Show angle</b> - Whether to display the orientation angle of the device's camera.</p>
+
+<p><b>Show angle line</b> - Whether to display a horizontal "level" line that visually indicates the orientation of the device.</p>
+
+<p><b>Show compass direction</b> - Whether to display the compass direction of the device's camera.</p>
+
+<p><b>Show a grid</b> - Whether to display one of a choice of grids on the camera preview (including 3x3 grid,
+which helps with applying the
+<a href="http://en.wikipedia.org/wiki/Rule_of_thirds">rule of thirds</a>).</p>
+
+<p><b>Show a crop guide</b> - A crop guide is a rectangle displayed on-screen, which has the specified aspect ratio
+(if different to the photo/video aspect ratio). This is useful if you plan to crop the resultant photos or videos
+to a particular aspect ratio. For photos, the crop-guide requires "Preview size" to be set to WYSIWYG mode.</p>
+
+<p><b>Show thumbnail animation</b> - Whether to display the moving thumbnail animation when taking a photo.</p>
+
+<p><b>Force maximum brightness</b> - Whether to force the screen display to maximum brightness.</p>
+
+<p><b>Photo and Video Settings:</b></p>
+
+<p><b>Photo and video settings</b> - Select to access the following controls:</p>
+
+<p><b>Camera resolution</b> - Select the resolution of photo images taken by the camera. Note that if auto-stabilise is enabled,
+images will in general come out as a slightly lower resolution (due to the rotation and cropping that's required).</p>
+
+<p><b>Image quality</b> - The image quality of saved JPEG images. Higher means better quality, but the image files will take up
+more storage space.</p>
+
+<p><b>Store location data (Geotagging)</b> - If selected, then photos will be tagged with the current
+location, and compass direction (note that if Open Camera is called via another app, the compass direction
+won't be saved - this is only supported when Open Camera is run as a standalone app). Location data will also
+be stored in videos (though only for devices that record in MPEG4 or 3GPP formats).</p>
+
+<p><b>Stamp photos</b> - Option to add a date and timestamp to the resultant photos. If "Store
+location data" is enabled, then the current location latitude and longitude coordinates and compass
+direction will also be stamped on the resultant photos (if the location is known). Note that if
+this option is enabled, then it will take longer to save the photo. Also note that this option
+isn't available for video.</p>
+
+<p><b>Video resolution</b> - Select the resolution of videos taken by the camera.</p>
+
+<p><b>Force 4K UHD video (experimental)</b> - Enable recording in 4K UHD (3840x2160) on the back camera (if ticked, this overrides the setting in
+"Video resolution"). Note that 4K video isn't fully supported by the standard Android API yet, so there is no way for Open Camera to
+determine if your device supports 4K video. If you enable this on a device that doesn't support it, you may either get an error
+message when you try to record, or it may succeed but create a video where the resolution isn't 4K, or may even result in a crash! So
+please test this out first. I've tested this successfully on a Samsung Galaxy S5 and Note 3. (If this option doesn't show up at all, it's
+because Open Camera thinks this is a device that probably doesn't support 4K video - if your device does support 4K video,
+please let me know so I can fix this.) Also note that on some devices, 4K resolutions may show up in the list of available
+video resolutions anyway.</p>
+
+<p><b>Enable video stabilization</b> - Video stabilization reduces the shaking due to the motion of the camera in
+both the preview and in recorded videos.</p>
+
+<p><b>Video bitrate (approx)</b> - If set to a value other than "default", the default video bitrate is overridden. Higher values mean better
+quality video, but the files take up more disk space. Note that some values may be unsupported by your device, and may
+cause the recording to fail - in some cases, this can cause problems with the camera that require a reboot to fix. So
+please test before using. Also note that the bitrate setting is approximate - the resultant video file will typically be slightly different
+to that requested.</p>
+
+<p><b>Video frame rate (approx)</b> - If set to a value other than "default", the camera will try to match this frame
+rate. Note that this is very approximate, as frame rate depends on many factors such as your device and lighting
+conditions, so there is no guarantee that the resultant video's frame rate will match with the requested value. Also note
+that some frame rate values may be unsupported by your device, and cause the recording to fail, so please test before
+using.</p>
+
+<p><b>Max duration of video</b> - This option can be used to set a maximum duration of the video. If set, video recording
+will stop after the specified time (unless already stopped earlier).</p>
+
+<p><b>Restart video after max duration</b> - If a max duration has been set (see above), this option can be used to make
+the video automatically stop and restart the specified number of times. So this can be used to take a video for a long
+period, broken up into multiple video files. If a max duration has not been set, then this option has no effect.</p>
+
+<p><b>Record audio</b> - Whether to record audio when recording a video.</p>
+
+<p><b>Audio source</b> - Select the audio source for recording video. The effect of this depends on your device -
+if it supports an external microphone, you may be able to use this by selecting "External mic".</p>
+
+<p><b>Flash while recording video</b> - If enabled, the camera flash will flash every second while recording video. This
+isn't something most people will need, but it can be useful if the phone is being operated remotely, as a signal that the
+video is still recording.</p>
+
+<p><b>Misc:</b></p>
+
+<p><b>Online help</b> - Load this web page.</p>
+
+<p><b>Donate to support development</b> - Loads the page for
+<a href="https://play.google.com/store/apps/details?id=harman.mark.donation">my donation app</a>.</p>
+
+<p><b>About</b> - Provides various debug information about the app and your device's camera. You can also copy
+this information to the clipboard.</p>
+
+<p><a name="widgets"><b>Shortcuts and widgets</b></p>
+
+<p>Open Camera installs two shortcuts - one to launch the main application ("Open Camera"), and
+another one, "Take Photo". When launched, this takes a photo automatically after opening Open
+Camera.</p>
+
+<p>Open Camera also comes with two widgets that can be
+<a href="https://support.google.com/nexus/answer/2781801">displayed on the lock screen</a>
+(requires Android 4.2 or later). The "Open Camera" widget launches the app; the "Take Photo" widget
+will also automatically take a photo. Note that if you have a PIN lock etc, you'll have to unlock
+even if "Show camera when locked" is enabled.</p>
+
+<p><a name="faq"><b>Frequently Asked Questions</b></p>
+
+<p><b>How can I save to my external SD card</b> - See <a href="#save_location">Save location</a> under Settings/More
+camera controls.</p>
+
+<p><b>Why are there two app icons?</b> - See <a href="#widgets">here</a> for details. I've done the "Take Photo" like this, as
+Google recommends shortcuts should be done as shortcuts, not widgets. Google do this themselves ("Google" and "Voice Search" are both
+shortcuts to "Google Search") (and CameraMX does a similar thing to Open Camera). Android doesn't support optional shortcuts - you
+choose what goes on the homescreen, but All Apps will list all shortcuts.</p>
+
+<p><b>My device can do 4K/UHD, so why doesn't it work on Open Camera?</b> - The Android API only allows up to FullHD.
+Devices which offer higher resolutions provide this only in the "stock" camera app (or "mods"). For some devices, it
+turns out that 3rd party camera apps can request recording in 3840x2160 (tested on Galaxy S5 and Note 3), but this
+isn't guaranteed to work, hence it's marked experimental. If this doesn't work, it's not a bug in Open Camera, it's
+something that's just not possible through 3rd party apps on some devices.</p>
+
+<p><b>Why doesn't the FPS/bitrate setting for video work?</b> - These settings only give "recommendations" to the
+camera, and there is no guarantee that they will be met. Some devices might not even allow recording at some
+settings, and there's no way to determine this in advance.</p>
+
+<p><b>But my camera can do 60/120FPS, so why can't Open Camera?</b> - High frame rates often are achieved only by the
+"stock" camera app (or "mods" of it) because these are written for a specific device and don't have to go through
+the standard Android camera API.</p>
+
+<p><b>Why can't I change the ISO?</b> - Even if your device supports ISO, this may not be made available through the
+standard Android API for 3rd party camera apps to use. For example,
+<a href="http://stackoverflow.com/questions/19759068/xperia-z1-camera-parameters-iso-values">this is true of Sony
+devices</a>.</p>
+
+<p><b>Why has Open Camera stopped working properly?</b> - If something stops working in Open Camera
+first try a reboot of your device. If that doesn't resolve the problem, another thing to try is
+reinstalling the app (or go to your device's App Settings and select "Clear data" for Open Camera) to
+reset it to its initial conditions. Obviously ideally this shouldn't happen, but can be a way of
+working around any unresolved bugs that appear. If something stops working in an upgrade to a new
+version of Open Camera, and the problem isn't resolved by a reinstall/Clear data, please let me
+know, but in the meantime you can install the older versions from
+<!-- Use small, to avoid messing up view on mobile devices -->
+<small><a href="https://sourceforge.net/projects/opencamera/files/">https://sourceforge.net/projects/opencamera/files/</a></small> .</p>
+
+<p><b>Why doesn't the preview display match the resultant photo/video? One of them is cropped.</b> - Firstly, make
+sure that Settings/On screen GUI/Preview size is set to "Match photo size (WYSIWYG)". However if that doesn't fix
+the problem, this is a limitation on some devices and photo/video resolutions (it happens if the device doesn't offer
+a "preview" with the same aspect ratio as the chosen photo/video resolution). A workaround may be to try a different
+resolution for photos and/or videos.</p>
+
+<p><b>Why isn't Open Camera available in my language?</b> - I can only speak English I'm afraid. Please contact me
+if you're willing to do a translation (this doesn't require any knowledge of Android programming, it's just a case
+of translating a set of strings in a text file).</p>
+
+<p><b>Why is the non-English translation of my language incomplete?</b> - Scene modes and color effects aren't
+currently translated, as these are just strings returned by the camera. Also note that even if I get someone to
+translate Open Camera, when I later add new features/options, this may require additional strings which aren't
+translated. I don't have a team of paid translators, so it's not always possible to keep translations up to date :)</p>
+
+<p><b>The non-English translation is wrong!</b> - I can only speak English, and am dependent on other people to
+offer translations. If you think a particular translation is inaccurate, please let me know.</p>
+
+<p><b>Why is the screen forced to maximum brightness?</b> - If you don't like this feature, you can switch it off
+by going to Settings/On screen GUI/Force maximum brightness.</p>
+
+<p><b>Why is auto-stabilise slow?</b> - This feature requires doing a decompress of the JPEG data, followed by a
+rotation of a multi-megapixel image, then recompressing, which typically results in a short pause on most devices.
+And as devices get faster CPUs, they typically come with cameras with even bigger megapixels! This is why I've made
+it optional (and you can set the volume control to quickly switch it on and off if you like).</p>
+
+<p><b>Why is auto-stabilise for photos only?</b> - Doing auto-stabilise for video is a <i>massively</i> harder
+problem. This wouldn't be possible in real-time - rotating images causes a noticeable pause as it is, imagine
+having to do that for every frame. Also the rotation angle wouldn't be constant, so it's a much harder problem
+figuring out what the correct result should actually be.</p>
+
+<p><b>Can I launch a different gallery app when I press the gallery icon? Why doesn't Open Camera
+have its own gallery app?</b> - If you have more than one Gallery app on your device, you should be
+given the choice which to use when you press the gallery icon. If one app is already set up as the
+default and you want to change it, then go to the App Settings for that app, and under
+"Launch by default" (or something like that) it will list if it is set as the defaults for any
+actions, with an option to clear them. There are plenty of gallery apps for Android, and it seems
+better for users to have this choice, rather than Open Camera having its own custom gallery.</p>
+
+<p><b>Why does Open Camera have ads?</b> - Open Camera does <i>not</i> have ads, but there are some clones that
+appear on Google Play with ads inserted. Please ensure that you've downloaded from one of the places listed above
+on this page.</p>
+
+<p><b>I don't like the UI!</b> - I'm hoping to make improvements to the user-interface - I have some ideas to make
+more options quickly accessible. But please be specific - comments like this could mean all sorts of things, such as
+the style of the icons, the arrangement of the icons, wanting more things on the main screen, wanting less things on
+the main screen, preferring swipes to icons, wanting it easier to change certain options, or even that some devices
+may have a bug that I'm not aware of.</p>
+
+<p><b>Why is the UI cluttered?</b> - Under Settings/On screen GUI, there are options to disable various controls and
+so on from the main view.</p>
+
+<p><b>Can I use the Open Camera source code in my app?</b> - Open Camera is available under the GPL (see
+<a href="#licence">Licence</a>), and can be used for free, including commercially, if you follow the terms of that
+licence (this means making the source of your app available under a GPL-compatible licence). If you would like to
+use the Open Camera in a closed source app, please contact me for a commercial licence, with details on your company
+and app.</p>
+
+<p><a name="contact"><b>Contacting me (bugs etc)</b></p>
+
+<p>Please contact me at <b>mark dot harman at ntlworld dot com</b> for bug reports, feature suggestions, etc.
+I can only test Open Camera on a small number of devices, so if you are having problems, these may be issues
+that I am unaware of, so reporting bugs will help me improve Open Camera! But please check the
+<a href="#faq">FAQ</a> first, in case your question is covered there.</p>
+
+<p>If you experience a crash, and Google offers to "Report", please do so (if you've installed via F-Droid,
+please see <a href="https://f-droid.org/wiki/page/Getting_logcat_messages_after_crash">here</a>).
+If you are reporting a bug, it is also
+helpful to email me the "About" information - please go to Settings/About, then click "Copy to clipboard", then you
+can paste the information into an email (or Google Keep, or wherever) to send to me.</p>
+
+<p>If something stops working in Open Camera (either it fails to start, or something no longer works properly),
+first try a reboot of your device. If that doesn't resolve the problem, another thing to try is reinstalling the
+app (or go to your device's App Settings and select "Clear data" for Open Camera) to reset it to its initial conditions.
+Obviously ideally this shouldn't happen, but can be a way of working around any unresolved bugs or odd conditions
+that appear.</p>
+
+<p>Note that whilst I welcome reviews/ratings, they are not a good way for reporting bugs (I may
+miss it, there's only limited number of characters for me to reply, and I don't get notified of
+further replies).</p>
+
+<p><a name="credits"><b>Credits</b></p>
+
+<p>Open Camera is written by Mark Harman. Additional credits:<ul>
+<li>Earlier versions (pre-Material Design) has an icon/logo by Cosmin Saveanu ( <a href="http://aboutfoto.wordpress.com/">http://aboutfoto.wordpress.com/</a> ).</li>
+<li>Russian translation by maksnogin ( maksnogin AT gmail DOT com ).</li>
+<li>Spanish translation by Mario Sanoguera ( sanogueralorenzo AT gmail DOT com ) ).</li>
+</ul></p>
+
+<p><a name="licence"><b>Licence</b></p>
+
+<p>Open Camera is released under the <a href="http://www.gnu.org/copyleft/gpl.html">GPL v3 or later</a>. The source code is
+available from
+<!-- Use small, to avoid messing up view on mobile devices -->
+<small><a href="https://sourceforge.net/projects/opencamera/files/">https://sourceforge.net/projects/opencamera/files/</a></small> .
+<!--The file exposure.png is also dual licensed under GPL v3 or later, and <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> or later (attribute to Mark Harman and please link to http://opencamera.sourceforge.net/ ).-->
+</p>
+
+<p>The following files are used in Open Camera:<ul>
+<!-- limit widths to 40 characters, to avoid messing up view on mobile devices -->
+<!--<li>Icon is from <a href="http://commons.wikimedia.org/wiki/File:Camera2_mgx.svg">http://commons.wikimedia.org/wiki/ File:Camera2_mgx.svg</a> , by AlphaZeta, under CC0 (public domain).</li>-->
+<!--<li>Icon/logo is from <a href="http://aboutfoto.wordpress.com/2014/09/20/a-logo-for-open-camera/">http://aboutfoto.wordpress.com/2014/09/ 20/a-logo-for-open-camera/</a> , by Cosmin Saveanu, under CC0 (public domain).</li>-->
+<li>earth.png from <a href="http://commons.wikimedia.org/wiki/File:NASA_Earth_America_2010.jpg">http://commons.wikimedia.org/wiki/ File:NASA_Earth_America_2010.jpg</a> , public domain.</li>
+<li>exposure_locked.png modified from <a href="https://www.iconfinder.com/icons/128411/antivirus_close_forbid_hide_lock_locked_password_privacy_private_protection_restriction_safe_secure_security_icon#size=64">https://www.iconfinder.com/icons/128411/ antivirus_close_forbid_hide_lock_locked_ password_privacy_private_protection_ restriction_safe_secure_security_icon# size=64</a> , by Aha-Soft, under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> (no need to credit me).</li>
+<li>exposure_unlocked.png modified from <a href="https://www.iconfinder.com/icons/128416/free_freedom_hack_lock_open_padlock_password_secure_security_unlock_unlocked_icon#size=64">https://www.iconfinder.com/icons/128416/ free_freedom_hack_lock_open_padlock_ password_secure_security_unlock_unlocked _icon#size=64</a> , by Aha-Soft, under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> (no need to credit me).</li>
+<!--<li>flash_off.png, flash_auto.png, flash_on.png from <a href="https://www.iconfinder.com/icons/62201/flash_icon#size=64">https://www.iconfinder.com/icons/62201/ flash_icon#size=64</a> , by The Working Group - http://blog.twg.ca , under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>-->
+<li>flash_red_eye.png from <a href="https://www.iconfinder.com/icons/103177/eye_see_view_watch_icon#size=128">https://www.iconfinder.com/icons/103177/ eye_see_view_watch_icon#size=128</a> , by Designmodo, under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+<li>flash_torch.png from <a href="https://www.iconfinder.com/icons/51924/bulb_light_icon#size=128">https://www.iconfinder.com/icons/51924/ bulb_light_icon#size=128</a> , by IconFinder - http://www.iconfinder.net , by <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+<li>focus_macro.png from <a href="https://www.iconfinder.com/icons/81105/macro_mb_icon#size=128">https://www.iconfinder.com/icons/81105/ macro_mb_icon#size=128</a> , by Yankoa - http://yankoa.deviantart.com/ , under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+<li>gallery.png from <a href="https://www.iconfinder.com/icons/6915/book_gallery_images_photos_pictures_icon#size=128">https://www.iconfinder.com/icons/6915/ book_gallery_images_photos_pictures_icon #size=128</a> , by Alessandro Rei - http://www.kde-look.org/usermanager/search.php?username=mentalrey , under <a href="http://www.gnu.org/copyleft/gpl.html">GPL v3</a>.</li>
+<!--<li>settings.png from <a href="https://www.iconfinder.com/icons/115801/settings_icon#size=128">https://www.iconfinder.com/icons/115801/ settings_icon#size=128</a> , by Designmodo, under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>-->
+<!--<li>share.png from <a href="https://www.iconfinder.com/icons/111030/share_icon#size=128">https://www.iconfinder.com/icons/111030/ share_icon#size=128</a> , by WPZOOM - http://www.wpzoom.com, under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>-->
+<!--<li>switch_camera.png from <a href="https://www.iconfinder.com/icons/103031/3d_rotate_icon#size=64">https://www.iconfinder.com/icons/103031/ 3d_rotate_icon#size=64</a> , by Valera Zvonko, under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>-->
+<!--<li>switch_video.png from <a href="https://www.iconfinder.com/icons/92787/film_photo_icon#size=32">https://www.iconfinder.com/icons/92787/ film_photo_icon#size=32</a> , by FatCow Web Hosting - http://www.fatcow.com/ , under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>-->
+<li>switch_video.png - merged from take_photo.png and take_video.png (see below), by Yankoa - http://yankoa.deviantart.com/ , <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> (no need to credit me).</li>
+<li>App icon/logo, take_photo.png, take_photo_pressed.png from <a href="https://www.iconfinder.com/icons/81087/mb_photo_icon#size=128">https://www.iconfinder.com/icons/81087/ mb_photo_icon#size=128</a> , by Yankoa - http://yankoa.deviantart.com/ , under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+<li>take_video.png, take_video_pressed.png from <a href="https://www.iconfinder.com/icons/81197/mb_rec_video_icon#size=128">https://www.iconfinder.com/icons/81197/ mb_rec_video_icon#size=128</a> , by Yankoa - http://yankoa.deviantart.com/ , under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+<!--<li>trash.png from <a href="https://www.iconfinder.com/icons/115789/trash_icon#size=128">https://www.iconfinder.com/icons/115789/ trash_icon#size=128</a> , by Designmodo, under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>-->
+<li>exposure.png, flash_auto.png, flash_off.png, flash_on.png, popup_flash_auto.png, popup_flash_on.png, settings.png, share.png, switch_camera.png, trash.png - from <a href="https://developer.android.com/design/downloads/index.html">https://developer.android.com/design/ downloads/index.html</a> , by Google, "You may use these materials without restriction to facilitate your app design and implementation".</li>
+</ul></p>
+
+<p><a name="history"><b>History</b></p><pre>
+
+Version 1.22 (Work in progress)
+
+FIXED   Crash if camera couldn't be opened, and GUI buttons were pressed.
+FIXED   Crash that could occur if camera closes whilst taking a photo.
+FIXED   Crash on Galaxy Nexus in rare circumstances when switching camera.
+ADDED   New immersive mode (requires Android 4.4 KitKat or higher), under
+        Settings/On screen GUI/Immersive mode. You can set the option to use
+        KitKat's immersive mode, either hiding the GUI, or even hiding
+        everything except the camera preview. Touch the preview or swipe in
+        from side to exit immersive mode. Also added an option to not even dim
+        the on-screen virtual navigation buttons.
+UPDATED Can now choose new save location from recent save folders picker.
+UPDATED Improved look of recent save folders picker.
+UPDATED Popup menu button now also shows indicator for torch.
+UPDATED If camera only supports one scene mode etc, no point offering the
+        option to the user.
+
+Version 1.21 (2014/11/15)
+
+FIXED   Broadcasts of Camera.ACTION_NEW_PICTURE, com.android.camera.NEW_PICTURE
+        and Camera.ACTION_NEW_VIDEO intents weren't supplying the Uri correctly
+        - auto-uploading for photos and videos with Owncloud should now work.
+FIXED   Corrected look of popup animation when in left-handed UI mode.
+FIXED   If called via an intent, and returning the bitmap via a parcel, the
+        bitmap wasn't being resized to a small size if auto-stabilise option
+        was enabled.
+ADDED   Option to stamp photos with date and time; and also GPS if location
+        data is enabled.
+ADDED   New application shortcut "Take Photo", which automatically takes a
+        photo after opening Open Camera.
+ADDED   Lock screen widgets, to allow calling Open Camera from the lock screen,
+        and taking a photo from the lock screen (requires Android 4.2).
+UPDATED Popup menu button now shows flash indicator (for flash auto or on).
+UPDATED Cleaned up settings - removed some options that are more easily
+        selected from the popup menu (ISO, white balance, scene mode, color
+        effect, auto-stabilize).
+UPDATED New material design icon.
+
+Version 1.20 (2014/09/21)
+
+FIXED   Crash (NumberFormatException in Parameters.getPreviewFpsRange()) on
+        startup for mb526.
+FIXED   Problems if settings window was opened while timer was active (timer is
+        now cancelled when going to settings).
+ADDED   New popup menu, allows quick access to changing: flash, focus, ISO,
+        white balance, scene mode, color effect, camera resolution, timer.
+UPDATED New icon (by Cosmin Saveanu).
+
+Version 1.19 (2014/09/08)
+
+FIXED   Crashes on startup due to invalid parameters being set.
+FIXED   Location info was lost when switching camera or changing scene mode.
+FIXED   Focus rectangle was shown after switching from video to photo, and
+        wouldn't disappear until a focus occurred.
+FIXED   Accents for Spanish translation.
+ADDED   New option to display crop guides.
+ADDED   Option to rotate preview 180 degrees (useful if using Open Camera with
+        adapters that invert the image).
+UPDATED Material Design icons and colours.
+UPDATED Improved look of toasts to match Android 4.4 look.
+UPDATED Removed some pointless toasts.
+
+Version 1.18 (2014/08/28)
+
+FIXED   Problem on some devices (including Nexus 5) where torch didn't turn off
+        until going to flash off mode.
+FIXED   Problem on some devices (e.g., Galaxy S5) if in video mode, and focus
+        mode is not continuous, and user went to settings and back, then tried
+        to record - video would hang.
+ADDED   Spanish translation (thanks to Mario Sanoguera).
+UPDATED If camera can't be opened, touching the screen now tries to reopen the
+        camera.
+UPDATED Allow installation of app onto external storage.
+
+Version 1.17 (2014/08/24)
+
+FIXED   Crash during auto-stabilise if unable to rotate bitmap (out of memory?)
+        now instead reports being unable to auto-stabilise.
+FIXED   Crash if failed to start camera preview.
+FIXED   Crash when changing flash mode, if camera was lost.
+FIXED   Problem where photos were being taken out of focus on some devices (bug
+        introduced in v1.16).
+FIXED   "Save location" option didn't work if folder didn't exist (this also
+        meant it didn't work when the app is first installed, unless a
+        photo/video was taken first) (bug introduced in v1.16 with the new file
+        chooser dialog).
+ADDED   New options for volume keys: focus, and switch auto-stabilise on/off.
+UPDATED Allow changing flash mode while recording video (so torch can be
+        switched on and off).
+UPDATED Zoom -/+ controls are now disabled by default, to reduce clutter (for
+        those upgrading, you can change this in Settings/On screen GUI).
+UPDATED Use more subtle/natural colors for red/green/blue in UI; improve look
+        of take photo/video icon.
+
+Version 1.16 (2014/08/17)
+
+FIXED   Device freeze when recording video on some Samsung devices (e.g.,
+        Galaxy S2, and some Galaxy S3 variants).
+FIXED   Fail to take photo if in manual focus mode, and picture was taken
+        whilst focusing.
+FIXED   Changing left/right handedness of UI didn't update until app
+        paused/resumed.
+FIXED   Problems with left-handed UI when going to settings and back, icons
+        would shift to incorrect positions.
+FIXED   When geotagging was enabled, this didn't take effect until the app was
+        paused and resumed (or restarted).
+FIXED   If zoomed in, then switch camera or app paused, the camera preview
+        would reset to being unzoomed on some devices (e.g., Nexus 7).
+UPDATED Save folder location is now chosen via a GUI, rather than having to
+        type the path.
+UPDATED If exposure is non-zero, the exposure is displayed on the photo/video
+        toast.
+UPDATED Photo/video toast now displays scene mode if not auto.
+UPDATED Video toast now displays if audio recording is disabled.
+UPDATED Photo/video toast now displays for longer.
+UPDATED Improved behaviour of left-handed UI, to make it more consistent with
+        the behaviour of the right-handed UI.
+UPDATED Minor improvements to alignment of on-screen text.
+UPDATED New icon for switching between photo and video mode.
+UPDATED Virtual buttons now dimmed.
+ADDED   Support for video stabilization.
+ADDED   Option to disable showing the zoom slider control (Settings/
+        On screen GUI.../Show zoom slider control).
+ADDED   Russian translation (thanks to maksnogin).
+
+Version 1.15 (2014/08/02)
+
+FIXED   Crash when exiting settings, if camera wasn't opened (bug introduced in
+        v1.14).
+FIXED   More crashes due to camera drivers that aren't following Android API
+        specs (Parameters.getFocusMode() should always be non-null, but isn't
+        on some devices!)
+FIXED   If video failed due to error (e.g., hitting device max filesize,
+        running out of space, of other errors), Open Camera now stops properly
+        rather than thinking the video is still recording. Last video error is
+        also stored in the about/debug window.
+ADDED   New option to lock orientation to portrait or landscape.
+ADDED   New option Flash while recording video.
+UPDATED Touch to set focus/metering now works while recording video.
+
+Version 1.14 (2014/07/22)
+
+FIXED   Crash when clicking to switch between photo/video modes if camera
+        couldn't be opened.
+FIXED   Problem with face detection not resuming after focusing on mtk6589.
+FIXED   Workaround for aspect ratio bug introduced in Android 4.4.3:
+        http://code.google.com/p/android/issues/detail?id=70830
+        Problem that this caused with aspect ratio with video recording.
+FIXED   Open Camera now available as a choice when camera icon pressed from
+        Gallery app (Open Camera now responds to
+        android.media.action.STILL_IMAGE_CAMERA).
+FIXED   Open Camera now available as a choice when camera icon pressed from
+        Cover Lock Screen (beta) app (Open Camera now responds to
+        android.media.action.STILL_IMAGE_CAMERA_SECURE).
+FIXED   All available video resolutions are now supported.
+ADDED   New "manual" focus mode - focusing happens when you touch the screen,
+        but it doesn't do automatic focusing when taking a photo.
+ADDED   Support for more hardware buttons: camera button to take photo/video;
+        focus button; zoom in/out buttons.
+ADDED   Long press on gallery icon now shows a popup of recent save folders (if
+        more than one is available), allowing you to quickly change between
+        them.
+ADDED   Location data now stored in videos too, if geotagging option is enabled
+        (only for MPEG4 and 3GPP video formats).
+ADDED   Option for volume keys to do nothing (not even changing the device
+        volume).
+ADDED   Option to lock screen when recording video (swipe to unlock).
+ADDED   Option to limit duration of recording video (automatically stops after
+        specified time); also option to restart video a specified number of
+        times.
+UPDATED Significantly improved speed for opening and closing settings (now
+        launched as a Fragment rather than a separate Activity).
+UPDATED Open Camera now remains active rather than being blocked by a "screen
+        lock" (face/PIN unlock still required to go to Gallery or Settings).
+        This behaviour can be switched off by going to Settings/More Camera
+        Controls/Show camera when locked.
+UPDATED Broadcast Camera.ACTION_NEW_PICTURE and com.android.camera.NEW_PICTURE
+        intents for new photos, and Camera.ACTION_NEW_VIDEO for new videos.
+UPDATED WYSIWYG mode is now the default setting for the preview size.
+UPDATED Expanded number of devices which show the "Force 4K UHD video
+        (experimental)" option (remember, 4K isn't officially supported by
+        Android API and this option is experimental - if this option shows, it
+        doesn't necessarily mean it will work on your device).
+UPDATED Video time is now shown with smaller font and off-centre, so as to not
+        obscure the view so much.
+
+Version 1.13 (2014/05/24)
+
+FIXED   Crash when opening settings on devices that didn't support
+        auto-stabilise (bug introduced in v1.10).
+FIXED   Crash introduced in v1.10 to do with cancelling autofocus on some
+        devices.
+ADDED   Options for video bitrate and frame rate. Note that both of these are
+        approximate settings, and whether they can be achieved may depend on
+        your device, and other conditions such as lighting. Also note that
+        setting non-default values for bitrate of frame rate may cause video
+        recording to fail, if the values are not supported.
+UPDATED About window now shows device manufacturer and model, to help with
+        debugging.
+
+Version 1.12 (2014/05/19)
+
+UPDATED Improve support for ISO setting (didn't show up on some devices, e.g.,
+        some Galaxy S5 variants).
+
+Version 1.11 (2014/05/17)
+
+ADDED   New GUI icon to set exposure lock.
+ADDED   New option in settings to set ISO.
+ADDED   Displays photo and video resolution etc, when starting up, switching
+        between photo/video, and switching camera.
+ADDED   About window now displays all camera parameters.
+UPDATED Don't display switch camera icon if device only has 1 camera.
+UPDATED Always reset to continuous focus mode when starting camera in video
+        mode (fixes some problems on some devices).
+
+Version 1.10 (2014/05/07)
+
+FIXED   Preview wouldn't restart after taking photo with continuous focus, on
+        Galaxy Nexus.
+FIXED   Problems with aspect ratio when not using WYSIWYG preview mode and
+        recording video.
+FIXED   Camcorder profile was always being initialised from the back camera,
+        even when recording video with the front camera.
+ADDED   New (experimental!) option to support 4K UHD (3840x2160) video
+        (Settings->Photo and video settings->Force 4K UHD video). Note that 4K
+        video isn't properly supported by Android API, so this option may show
+        even if it isn't supported on your device, and may not work or even
+        crash. I've successfully tested this on a Samsung Galaxy S5 and Note 3.
+ADDED   Option to not display the -/+ zoom control.
+UPDATED All available video resolutions offered by the camera are now supported.
+UPDATED Picture and video resolution preferences display aspect ratio and
+        megapixels of each resolution.
+UPDATED Reorganised preferences into new On screen GUI page.
+UPDATED Don't change camera settings whilst camera is autofocusing (may help
+        problems/crashes on some devices).
+
+Version 1.9 (2014/03/22)
+
+FIXED   Crash on some devices when starting app or switching camera (bug
+        introduced in v1.8).
+
+Version 1.8 (2014/03/18)
+
+FIXED   Crash on startup if Network or GPS location providers not available,
+        and geotagging was enabled.
+FIXED   Crash if specified save folder was an empty string.
+FIXED   Don't ever turn on flash during autofocus when app is launched.
+FIXED   Various other crashes.
+ADDED   Option to not force screen display to maximum brightness.
+ADDED   Option to display horizontal "level" line.
+ADDED   Support for hardware menu button (now opens settings).
+ADDED   Option to display a 4x2 grid (if you previously had a 3x3 "rule of
+        thirds" grid, you'll have to reenable it under the Settings).
+ADDED   Added privacy policy (for location permission/geotagging) to intro
+        window text (needed for Nokia Store).
+ADDED   Uses setRecordingHint, may improve performance of starting video
+        recording.
+ADDED   New About option in Settings, providing debug info.
+UPDATED Don't re-autofocus before taking a photo, if camera recently
+        successfully focused due to user touching the screen.
+UPDATED Display yellow or green dot next to earth icon to indicate location
+        accuracy.
+UPDATED Display earth icon with red dash through it, if geotagging is enabled,
+        but the app doesn't have a location.
+UPDATED Current zoom is now saved when app goes idle, or switching cameras.
+UPDATED Offset zoom slider slightly so as to not interfere with Google Now
+        swipe.
+UPDATED Allow greater range of characters (including unicode) for save location
+        (now allows any character other than those reserved by filesystem).
+
+Version 1.7 (2014/01/29)
+
+FIXED   More fixes for aspect ratio - the preview display should now always
+        have a 1:1 aspect ratio (on some devices this may mean black bars are
+        shown, if there isn't a match between the camera's available preview
+        sizes, and the aspect ratio of the device's display).
+FIXED   Possible crash relating to creating thumbnails.
+FIXED   Autofocus on startup didn't always actually focus.
+FIXED   If camera doesn't support focus areas, but does support metering areas,
+        still set the metering area.
+FIXED   Was sometimes trying to set metering areas when metering areas not
+        supported by device.
+FIXED   If image is deleted after taking the photo, the thumbnail is now
+        properly updated to what is now the most recent photo or video.
+ADDED   New option to set preview aspect ratio to match the picture/video
+        aspect ratio (WYSIWIG).
+UPDATED Save folder can now be an absolute path, allowing possibility to save
+        on external SD cards (though you need to know what the path is, which
+        typically varies depending on device; I am unable to test this, so
+        please let me know if it does or doesn't work).
+UPDATED Zoom -/+ control now matches the zoom slider orientation.
+UPDATED Hide some icons when taking video, as they don't do anything.
+
+Version 1.6 (2014/01/20)
+
+FIXED   Crash when trying to access image or video resolutions in settings, if
+        camera didn't offer these settings.
+FIXED   Exposure compensation wasn't available on devices if min or max
+        exposure compensation level was equal to 0.
+FIXED   Aspect ratio problems with the preview on some devices (if you are
+        still having problems, please let me know what Android device you are
+        using).
+FIXED   Aspect ratio problems with the preview on all devices when switching
+        the camera.
+FIXED   Problem on smaller devices where on-screen text overlapped with take
+        photo button; the text is now aligned to above the button on all
+        devices.
+ADDED   Zoom can now be also controlled via on-screen slider (next to the
+        plus/minus zoom buttons).
+ADDED   Option for volume keys to control the exposure compensation.
+ADDED   Option to display compass direction of camera on-screen (defaults to
+        on, disable it in options if you don't like it).
+ADDED   Option to choose microphone for recording audio (support for external
+        microphones).
+UPDATED Exposure compensation is now set via a new button in the on-screen GUI
+        (the black and white +/- symbol) instead of the settings. Clicking this
+        will bring up a slider and plus/minus buttons to adjust the exposure
+        compensation. To get rid of the slider and buttons, either click the
+        Exposure button again, or click elsewhere on the screen.
+UPDATED Geotagging now stores image compass direction (GPSImgDirection,
+        GPSImgDirectionRef).
+UPDATED Display degree symbol for displayed on-screen angles.
+UPDATED Zoom control is now transparent.
+UPDATED Filter applied to sensor for device angle.
+
+Version 1.5 (2014/01/09)
+
+FIXED   Crash on Android 4.4 when launching for first time, or changing the
+        save folder (issue with creating the save folder, due to Android no
+        longer allowing ANDROID_MEDIA_MOUNTED to be broadcast).
+FIXED   Crash if failed to open camera after switching cameras, then user tried
+        to zoom.
+FIXED   Other potential crashes (NumberFormatException on "es209ra" on startup;
+        RuntimeException on Xperia Go when taking photo; RuntimeException on
+        "maxx_ax5" when taking photo with face detection).
+
+Version 1.4 (2013/12/16)
+
+FIXED   Calculation for focus areas wasn't right for front facing cameras.
+FIXED   Exif data wasn't getting saved if auto-stabilise option was enabled
+        (this also meant that on some cameras/focus modes, the orientation
+        would have been incorrect).
+FIXED   "Toast" pop-up messages looked poor on Android 4.4.
+FIXED   Fixed potential crash if taking picture fails.
+FIXED   Touch to focus with continuous focus shouldn't show red box.
+FIXED   Crash with auto-stabilise for some angles larger than 90 degrees.
+FIXED   Crash when rotating device when viewing "Photo and video settings".
+FIXED   If device was rotated when app was idle, the UI sometimes showed with
+        the incorrect orientation.
+ADDED   Images now tagged with current location (optional, off by default). Note
+        that Open Camera now requires Location permission, for this feature.
+ADDED   Option for face detection.
+ADDED   Touch to select focus area also now sets the metering area (used to
+        determine exposure).
+ADDED   Now displays current time.
+ADDED   Option to display a 3x3 grid ("rule of thirds").
+ADDED   Now displays flashy thumbnail animation when taking a photo (you can
+        disable this in the options under "More camera controls..." if you
+        don't like this sort of thing!)
+UPDATED Gallery button now displays thumbnail of last image/video taken.
+UPDATED Clicking the Gallery button now goes to most recent image/video.
+UPDATED Made it easier to see on-screen text when underlying photo preview is
+        bright, by drawing a background with the text.
+
+Version 1.3 (2013/11/18)
+
+FIXED   Video files may not have shown up properly in other apps, or over USB,
+        until rebooting device.
+FIXED   Make sure filenames for images/videos are unique.
+ADDED   New burst mode option - take a repeated set of photos at once, or with
+        a delay.
+ADDED   Option for video resolution.
+ADDED   Display battery status on screen.
+UPDATED Reorganised settings screen to remove clutter - less commonly used
+        options have been moved to sub-screens; "Record audio?" is moved to
+        "Photo and video settings..."
+UPDATED Only show zoom level (if that option is set) when actually zoomed in.
+
+Version 1.2 (2013/11/09)
+
+FIXED   Crash when launching gallery, if no Gallery app installed on device.
+FIXED   Selecting a focus area shouldn't switch to focus mode auto.
+FIXED   Focus area wasn't getting reset when it should (e.g., changing focus
+        mode or zooming).
+FIXED   Fixed potential crash on auto focus.
+FIXED   Hide GUI options while taking a photo (otherwise problems can be caused
+        by changing options, e.g., changing focus mode).
+FIXED   Message for failing to open camera was too wide for portrait view.
+ADDED   Option for exposure compensation.
+ADDED   Show whether auto focus was successful or not (via red/green rectangle)
+        even if focus area not selected.
+UPDATED Pause after taking photo now defaults to false.
+UPDATED Made "toasts" look nicer.
+UPDATED Added simple instructions to the intro window shown on first time
+        start-up.
+
+Version 1.1 (2013/10/27)
+
+ADDED  Touch to select focus area.
+ADDED  Optional beep on timer countdown.
+ADDED  Option on whether to display the current camera zoom level on screen.
+
+Version 1.0 (2013/10/17)
+
+First release.
+</pre>
+
+<hr>
+<p><a href="http://sourceforge.net/p/opencamera/">Open Camera on Sourceforge.</a></p>
+<p><a href="http://homepage.ntlworld.com/mark.harman/software.html">More of my Free software.</a></p>
+
+</body>
+</html>

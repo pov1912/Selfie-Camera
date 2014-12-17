@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Item Grid View accessories list_accessories_item.xml -->
+    <dimen name="gItem_accessories_layout_width">50dp</dimen>
+    <dimen name="gItem_accessories_layout_hight">50dp</dimen>
+    <dimen name="gItem_accessories_padding">5dp</dimen>
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/gItem_accessories_layout_width"
+        android:layout_height="@dimen/gItem_accessories_layout_hight"
+        android:padding="@dimen/gItem_accessories_padding"
+        android:src="@drawable/it_b7" />
+
+</LinearLayout>
